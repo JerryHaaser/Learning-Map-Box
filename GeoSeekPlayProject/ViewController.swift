@@ -28,8 +28,6 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
     func setMapView() {
         let mapView = MGLMapView(frame: view.bounds, styleURL: MGLStyle.satelliteStyleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
