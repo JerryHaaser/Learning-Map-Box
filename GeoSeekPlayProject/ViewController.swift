@@ -12,11 +12,12 @@ import Mapbox
 class ViewController: UIViewController, MGLMapViewDelegate {
     
     @IBOutlet weak var myMapView: MGLMapView!
+    @IBOutlet weak var continueButton: UIBarButtonItem!
+    
     
     var pressedLocation:CLLocation? = nil {
         didSet{
-            //            continueButton.isEnabled = true
-            //            continueButton.isHighlighted = true
+                continueButton.isEnabled = true
             print("pressedLocation was set")
         }
     }
@@ -53,6 +54,22 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             wayAnnotation.coordinate = coordsFromTouchPoint
             wayAnnotation.title = "waypoint"
             
+        }
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        
+        print("The button was tapped...")
+        performSegue(withIdentifier: "ToAddGemSegue", sender: self)
+        
+}
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToAddGemSegue" {
+            guard let destinationVC = segue.destination as? AddGemViewController,
+                let pressedLocation = pressedLocation else { return }
+            
+            destinationVC.gemLocation = pressedLocation
         }
     }
 }

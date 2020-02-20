@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tGV-No-ts0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuj-Fd-W3L" customClass="MGLMapView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
@@ -25,20 +25,63 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tuj-Fd-W3L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5X5-U9-Ka3"/>
+                            <constraint firstItem="tuj-Fd-W3L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4TO-e4-Ew6"/>
                             <constraint firstItem="tuj-Fd-W3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aaD-DU-npO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tuj-Fd-W3L" secondAttribute="bottom" id="ahw-5T-jLP"/>
+                            <constraint firstItem="tuj-Fd-W3L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="j2P-Ky-3LI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tuj-Fd-W3L" secondAttribute="trailing" id="q3j-Tv-KrL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0Be-xa-iaa">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" systemItem="add" id="i7f-gQ-TlO">
+                            <connections>
+                                <action selector="continueButtonTapped:" destination="BYZ-38-t0r" id="aIh-yu-ggb"/>
+                                <segue destination="aJJ-KK-y9p" kind="show" identifier="ToAddGemSegue" id="X8z-7j-68b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="continueButton" destination="i7f-gQ-TlO" id="Nsx-9w-29x"/>
                         <outlet property="myMapView" destination="tuj-Fd-W3L" id="dqf-V1-7SA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="1940.5797101449277" y="138.61607142857142"/>
+        </scene>
+        <!--Add Gem View Controller-->
+        <scene sceneID="Z1N-6w-D0j">
+            <objects>
+                <viewController id="aJJ-KK-y9p" customClass="AddGemViewController" customModule="GeoSeekPlayProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zA6-0e-z06">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Blj-uk-ChP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="baG-mA-5sm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zb-jF-Glk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2779.7101449275365" y="140.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s1E-rB-hqG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tGV-No-ts0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mge-dq-KJk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D3S-aa-8vd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsT-Sf-ugh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,7 @@
 		85F9D9F723FDDF1F00DEFA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F9D9F523FDDF1F00DEFA8B /* Main.storyboard */; };
 		85F9D9F923FDDF2400DEFA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F9D9F823FDDF2400DEFA8B /* Assets.xcassets */; };
 		85F9D9FC23FDDF2400DEFA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F9D9FA23FDDF2400DEFA8B /* LaunchScreen.storyboard */; };
+		85F9DA0423FE499F00DEFA8B /* AddGemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F9DA0323FE499F00DEFA8B /* AddGemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		85F9D9F823FDDF2400DEFA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F9D9FB23FDDF2400DEFA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F9D9FD23FDDF2400DEFA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85F9DA0323FE499F00DEFA8B /* AddGemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGemViewController.swift; sourceTree = "<group>"; };
 		8C6468314C2AA9463609EF7D /* Pods-GeoSeekPlayProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSeekPlayProject.release.xcconfig"; path = "Target Support Files/Pods-GeoSeekPlayProject/Pods-GeoSeekPlayProject.release.xcconfig"; sourceTree = "<group>"; };
 		94360956AC917A72DE2F3A1D /* Pods_GeoSeekPlayProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoSeekPlayProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69FCE53ED81910F2B59F80D /* Pods-GeoSeekPlayProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSeekPlayProject.debug.xcconfig"; path = "Target Support Files/Pods-GeoSeekPlayProject/Pods-GeoSeekPlayProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				85F9D9EF23FDDF1F00DEFA8B /* AppDelegate.swift */,
 				85F9D9F123FDDF1F00DEFA8B /* SceneDelegate.swift */,
 				85F9D9F323FDDF1F00DEFA8B /* ViewController.swift */,
+				85F9DA0323FE499F00DEFA8B /* AddGemViewController.swift */,
 				85F9D9F523FDDF1F00DEFA8B /* Main.storyboard */,
 				85F9D9F823FDDF2400DEFA8B /* Assets.xcassets */,
 				85F9D9FA23FDDF2400DEFA8B /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 			files = (
 				85F9D9F423FDDF1F00DEFA8B /* ViewController.swift in Sources */,
 				85F9D9F023FDDF1F00DEFA8B /* AppDelegate.swift in Sources */,
+				85F9DA0423FE499F00DEFA8B /* AddGemViewController.swift in Sources */,
 				85F9D9F223FDDF1F00DEFA8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
